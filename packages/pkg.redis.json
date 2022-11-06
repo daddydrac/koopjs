@@ -1,0 +1,37 @@
+{
+    "name": "@koopjs/cache-redis",
+    "version": "1.0.3",
+    "description": "Redis Cache Plugin for Koop",
+    "main": "dist/index.js",
+    "scripts": {
+      "compile": "rm -rf dist/* && buble -i src -o dist",
+      "test": "standard src && tape test/**/*.js | tap-spec"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/koopjs/koop-cache-redis.git"
+    },
+    "keywords": [
+      "koop",
+      "cache",
+      "redis",
+      "plugin"
+    ],
+    "author": "Daniel Fenton <dfenton@esri.com>",
+    "license": "Apache-2.0",
+    "bugs": {
+      "url": "https://github.com/koopjs/koop-cache-redis/issues"
+    },
+    "homepage": "https://github.com/koopjs/koop-cache-redis#readme",
+    "dependencies": {
+      "config": "^3.1.0",
+      "koop-logger": "^1.2.0",
+      "redis": "^2.8.0"
+    },
+    "devDependencies": {
+      "buble": "^0.19.0",
+      "standard": "^14.0.0",
+      "tap-spec": "^5.0.0",
+      "tape": "^4.8.0"
+    }
+  }

@@ -1,0 +1,16 @@
+{
+  "port": 8080,
+  "cache": {
+    "redis": {
+      "host": "redis://localhost:6379"
+    }
+  },
+  "filesystem": {
+    "local": {
+      "rootDir": "/var/koop/files"
+    }
+  },
+  "db": {
+    "postgis": "postgres://postgres:postgres@localhost:5432/geo_database"
+  }
+}

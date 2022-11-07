@@ -74,10 +74,12 @@ The Dockerfile is a multi-stage docker build to reduce image size. To skip build
 
 ## Kubernetes/Helm Deployment
 
-   - ```helm install koopjs helm/ --values koopjs/values.yaml```
+   - ```cd helm```
 
-#### Override values.yaml
-   - ```helm install koopjs helm/ --set service.type=ClusterIP --set service.port=80```
+   - ```helm install koopjs .```
+
+#### Example override values.yaml
+   - ```helm install koopjs . --set service.type=ClusterIP --set service.port=80```
 
 #### Get default value NodePorts from KoopJS
 

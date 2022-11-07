@@ -32,9 +32,7 @@ Once the container is built, you'll see the boilerplate REST API connecting to G
 ----------------------------
 
 ## Docker Instructions
-The Dockerfile is a multi-stage docker build to reduce image size.
-
-To skip build times pull the image and run:
+The Dockerfile is a multi-stage docker build to reduce image size. To skip build times pull the image and run:
 
 Pull: ```docker pull jhoeller/koopjs```
 

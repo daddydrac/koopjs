@@ -38,13 +38,8 @@ securityContext: {}
 
 service:
   type: NodePort
-  nodePort: 80
-  name: http
-  type: NodePort
-  nodePort: 8080
-  name: http
-  type: NodePort
-  nodePort: 9000
+  nodePort: 30111
+  port: 8080
   name: http
 
 ingress:

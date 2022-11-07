@@ -2,7 +2,28 @@
 <em>See instructions below to install for Kubernetes or Docker ~ </em> Koop is a JavaScript toolkit for connecting spatial APIs. Out of the box, it exposes a Node. js server that translates GeoJSON into the GeoServices specification supported by ArcGIS products. 
 
 ## Features
-Boilerplate REST API to get you started faster, with json config for Redis cache, Postgres/PostGIS support for speed, & local file store config if not using s3. <strong><em>The json config is located in:</em></strong>  ``` /koop/config/default.json```.
+Boilerplate REST API to get you started faster, with json config for Redis cache, Postgres/PostGIS support for speed, & local file store config if not using s3. 
+
+<strong><em>The json config is located in:</em></strong>  ``` /koop/config/default.json```, and is pre-configured to support custom ports, redis cache, local filestore and Postgres/PostGIS for faster retrieval of geospatial information with ```Koop FileExporter``` for interop.
+
+```
+{
+  "port": 8080,
+  "cache": {
+    "redis": {
+      "host": "redis://localhost:6379"
+    }
+  },
+  "filesystem": {
+    "local": {
+      "rootDir": "/var/koop/files"
+    }
+  },
+  "db": {
+    "postgis": "postgres://postgres:postgres@localhost:5432/geo_database"
+  }
+}
+```
 
  - koopjs/cli
  - arcgis/core@4.25.0-next.20221012

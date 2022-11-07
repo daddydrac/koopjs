@@ -29,13 +29,16 @@ RUN npm install -g @koopjs/cli \
     pg-promise \
     @koopjs/cache-redis \
     koop-logger \
-    redis 
+    redis \
+    worker-farm
 
 FROM deps AS geospatial
 
 WORKDIR /usr/src/koop
 
 RUN npm install
+RUN npm install gdal --save
+
 EXPOSE 8080 9000 80
 
 CMD npm start

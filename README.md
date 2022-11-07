@@ -37,7 +37,7 @@ The Dockerfile is a multi-stage docker build to reduce image size.
 To skip build times pull the image and run:
 
 Pull: ```docker pull jhoeller/koopjs```
-Run: ```docker run --rm -it -v "${PWD}:/usr/src/" -p 8080:8080 -p 9000:9000 -p 80:80 jhoeller/koopjs:latest```
+Run: ```docker run --rm -it -d -v "${PWD}:/usr/src/" -p 8080:8080 -p 9000:9000 -p 80:80 jhoeller/koopjs:latest```
 
 ### Build & run locally
 
@@ -45,7 +45,7 @@ Run: ```docker run --rm -it -v "${PWD}:/usr/src/" -p 8080:8080 -p 9000:9000 -p 8
   
    - ```docker build -t koopjs .```
 
-   - ```docker run --rm -it -v "${PWD}:/usr/src/" -p 8080:8080 -p 9000:9000 -p 80:80 koopjs```
+   - ```docker run --rm -it -d -v "${PWD}:/usr/src/" -p 8080:8080 -p 9000:9000 -p 80:80 koopjs```
 
 TODO: Add worker farm for GDAL tiles -> https://www.npmjs.com/package/worker-farm
 

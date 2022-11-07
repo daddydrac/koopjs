@@ -81,8 +81,14 @@ The Dockerfile is a multi-stage docker build to reduce image size. To skip build
 
 #### Get default value NodePorts from KoopJS
 
-   - ```export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services koopjs)```
-
-   - ```export NODE_IP=$(kubectl get nodes --namespace deault -o jsonpath="{.items[0].status.addresses[0].address}")```
-
-   - ```echo http://$NODE_IP:NODE_PORT```
+  ```
+  export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services koopjs)
+  ```
+  
+  ```
+  export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")
+  ```
+  
+  ```
+  echo http://$NODE_IP:$NODE_PORT
+  ```

@@ -36,10 +36,13 @@ The Dockerfile is a multi-stage docker build to reduce image size.
 
 To skip build times pull the image and run:
 
-```docker pull jhoeller/koopjs```
+Pull: ```docker pull jhoeller/koopjs```
+Run: ```docker run --rm -it -v "${PWD}:/usr/src/" -p 8080:8080 -p 9000:9000 -p 80:80 jhoeller/koopjs:latest```
 
 ### Build & run locally
 
+   - ```git clone https://github.com/salinaaaaaa/koopjs.git```
+  
    - ```docker build -t koopjs .```
 
    - ```docker run --rm -it -v "${PWD}:/usr/src/" -p 8080:8080 -p 9000:9000 -p 80:80 koopjs```

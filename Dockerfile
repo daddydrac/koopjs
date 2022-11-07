@@ -31,7 +31,7 @@ RUN npm install -g @koopjs/cli \
     koop-logger \
     redis \
     koop-worker \
-    worker-farm
+    worker-farm 
 
 
 FROM deps AS geospatial
@@ -40,6 +40,7 @@ WORKDIR /usr/src/koop
 
 RUN npm install
 RUN npm install gdal --save
+RUN npm install -g koop-exporter
 
 EXPOSE 8080 9000 80
 

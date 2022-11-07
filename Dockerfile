@@ -30,7 +30,9 @@ RUN npm install -g @koopjs/cli \
     @koopjs/cache-redis \
     koop-logger \
     redis \
+    koop-worker \
     worker-farm
+
 
 FROM deps AS geospatial
 

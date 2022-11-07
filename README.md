@@ -4,6 +4,22 @@
 ## Features
 Boilerplate REST API to get you started faster, with json config for Redis cache, Postgres/PostGIS support for speed, & local file store config if not using s3. 
 
+ - koopjs/cli
+ - arcgis/core@4.25.0-next.20221012
+ - pg: Postgres/PostGIS support
+ - koop-queue
+ - koop-s3fs: AWS s3 connect
+ - koopjs/output-vector-tiles
+ - koopjs/provider-agol
+ - koopjs/provider-s3-select
+ - koopjs/provider-file-geojson
+ - koopjs/provider-github
+ - GDAL: Read and write raster and vector geospatial datasets straight from [Node.js](http://nodejs.org) with this native [GDAL](http://www.gdal.org/) binding. GDAL [2.4.4](https://github.com/OSGeo/gdal/releases/tag/v2.4.4) ([GEOS](http://trac.osgeo.org/geos/) [3.4.2](http://trac.osgeo.org/geos/browser/tags/3.4.2/NEWS), [PROJ](http://trac.osgeo.org/proj/) [4.8.0](http://www.osgeo.org/node/1268)) comes bundled, so node-gdal will work straight out of the box. To get started, browse the [**API Documentation**](http://naturalatlas.github.io/node-gdal/classes/gdal.html) or [examples](examples/).
+ - Worker Farm: A worker bot to run jobs for Koop
+ - Koop Exporter: A Koop cache must be registered to work.
+ - FeatureServer An open source implementation of the GeoServices specification.
+ - <em>And more!</em>
+ 
 <strong><em>The json config is located in:</em></strong>  ``` /koop/config/default.json```, and is pre-configured to support custom ports, redis cache, local filestore and Postgres/PostGIS for faster retrieval of geospatial information with ```Koop FileExporter``` for interop.
 
 ```
@@ -24,23 +40,6 @@ Boilerplate REST API to get you started faster, with json config for Redis cache
   }
 }
 ```
-
- - koopjs/cli
- - arcgis/core@4.25.0-next.20221012
- - pg: Postgres/PostGIS support
- - koop-queue
- - koop-s3fs: AWS s3 connect
- - koopjs/output-vector-tiles
- - koopjs/provider-agol
- - koopjs/provider-s3-select
- - koopjs/provider-file-geojson
- - koopjs/provider-github
- - GDAL: Read and write raster and vector geospatial datasets straight from [Node.js](http://nodejs.org) with this native [GDAL](http://www.gdal.org/) binding. GDAL [2.4.4](https://github.com/OSGeo/gdal/releases/tag/v2.4.4) ([GEOS](http://trac.osgeo.org/geos/) [3.4.2](http://trac.osgeo.org/geos/browser/tags/3.4.2/NEWS), [PROJ](http://trac.osgeo.org/proj/) [4.8.0](http://www.osgeo.org/node/1268)) comes bundled, so node-gdal will work straight out of the box. To get started, browse the [**API Documentation**](http://naturalatlas.github.io/node-gdal/classes/gdal.html) or [examples](examples/).
- - Worker Farm: A worker bot to run jobs for Koop
- - Koop Exporter: A Koop cache must be registered to work.
- - FeatureServer An open source implementation of the GeoServices specification.
- - <em>And more!</em>
-
 
  ## Boilerplate REST API test routes:
 
